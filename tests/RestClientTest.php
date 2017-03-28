@@ -53,12 +53,12 @@ class RestClientTest extends \PHPUnit_Framework_TestCase
         );
 
         $request = $this->restClient->createRequest('GET', '/testpath', array('Test' => 'MyTest'));
-        $this->assertInstanceOf('\GuzzleHttp\Psr7\Request',$request);
+        $this->assertInstanceOf(Request::class,$request);
         $this->assertEquals('MyTest',$request->getHeader('Test')[0]);
         $this->assertEmpty($request->getHeader('Content-Type'));
 
         $request = $this->restClient->createRequest('POST', '/testpath', array());
-        $this->assertInstanceOf('\GuzzleHttp\Psr7\Request',$request);
+        $this->assertInstanceOf(Request::class,$request);
         $this->assertEquals('application/json',$request->getHeader('Content-Type')[0]);
     }
 

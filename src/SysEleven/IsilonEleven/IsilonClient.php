@@ -110,7 +110,7 @@ class IsilonClient implements IsilonInterface
             'zone' => $zone
         ];
 
-        return $this->callApi('POST', '/platform/1/protocols/nfs/exports', ['json' => $params]);
+        return $this->callApi('POST', '/platform/2/protocols/nfs/exports', ['json' => $params]);
     }
 
     /**
@@ -127,7 +127,7 @@ class IsilonClient implements IsilonInterface
             throw new \InvalidArgumentException('Non-numeric export ID given.');
         }
 
-        return $this->callApi('DELETE', '/platform/1/protocols/nfs/exports/' . $id);
+        return $this->callApi('DELETE', '/platform/2/protocols/nfs/exports/' . $id);
     }
 
     /**
@@ -144,7 +144,7 @@ class IsilonClient implements IsilonInterface
             throw new \InvalidArgumentException('Non-numeric export ID given.');
         }
 
-        return $this->callApi('PUT', '/platform/1/protocols/nfs/exports/' . $id, ['json' => $params]);
+        return $this->callApi('PUT', '/platform/2/protocols/nfs/exports/' . $id, ['json' => $params]);
     }
 
     /**

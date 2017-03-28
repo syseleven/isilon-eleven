@@ -104,7 +104,6 @@ class RestClient implements RestClientInterface
      * Initializes the Client and sets some options.
      *
      * @param string $host   Url of your isilon account
-     * @param string $key   Api key
      * @param array  $options
      */
     public function __construct($host, array $options = array())
