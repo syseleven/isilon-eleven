@@ -13,7 +13,7 @@
 
 namespace SysEleven\IsilonEleven\Tests;
 
-use GuzzleHttp\Message\Response;
+use GuzzleHttp\Psr7\Response;
 use SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException;
 
 
@@ -44,7 +44,7 @@ class IsilonRuntimeExceptionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('Isilon Error', $me->getMessage());
         $this->assertEquals(123, $me->getCode());
         $this->assertEquals(array(), $me->getErrorData());
-        $this->assertInstanceOf('\GuzzleHttp\Message\Response', $me->getResponse());
+        $this->assertInstanceOf(Response::class, $me->getResponse());
     }
 
 }

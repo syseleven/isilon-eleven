@@ -31,5 +31,9 @@ interface IsilonInterface
 
     public function createExport(array $paths, $zone = 'S11CUSTOMERS');
 
+    public function deleteExport($id);
+
+    public function updateExport($id, array $values);
+
     public function callApi($method, $path, array $parameters = array(), array $headers = []);
 }

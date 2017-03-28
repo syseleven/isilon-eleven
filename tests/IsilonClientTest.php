@@ -14,6 +14,7 @@ namespace SysEleven\IsilonEleven\Tests;
 
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
+use SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException;
 use SysEleven\IsilonEleven\IsilonClient;
 use \Mockery as m;
 use SysEleven\IsilonEleven\RestClient;
@@ -41,17 +42,13 @@ class IsilonClientTest extends \PHPUnit_Framework_TestCase {
         $this->client = new IsilonClient($restClient);
     }
 
-    public function tearDown()
-    {
-    }
-
     /**
      */
-    public function testListExports()
+    public function testListExport()
     {
         $this->client->setHandler(
             new MockHandler([
-                new Response(200, ['X-Foo' => 'Bar', 'Content-Type' => 'application/json'], json_encode(['Test' => '123'])),
+                new Response(200, ['Content-Type' => 'application/json'], json_encode(['Test' => '123'])),
             ])
         );
 
@@ -61,10 +58,75 @@ class IsilonClientTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @covers \SysEleven\IsilonEleven\IsilonClient::callApi
-     * @expectedException \BadMethodCallException
      */
-    public function testCallApi()
+    public function testCreateExport()
     {
+        $this->client->setHandler(
+            new MockHandler([
+                new Response(200, ['Content-Type' => 'application/json'], json_encode(['Test' => '123'])),
+            ])
+        );
+
+        $exports = $this->client->createExport(['/test'], IsilonClient::ZONE_S11CUSTOMERS);
+
+        $this->assertEquals('123', $exports['Test']);
+    }
+
+    /**
+     */
+    public function testUpdateExport()
+    {
+        $this->client->setHandler(
+            new MockHandler([
+                new Response(200, ['Content-Type' => 'application/json'], json_encode(['Test' => '123'])),
+                new Response(500)
+            ])
+        );
+
+        $export = $this->client->updateExport(1, ['somenew' => 'values']);
+        $this->assertEquals('123', $export['Test']);
+
+        try {
+            $this->client->updateExport(4711, ['somenew' => 'values']);
+            $this->assertFalse(true, 'Assertion should not be reachable');
+        } catch (\Exception $e) {
+            $this->assertInstanceOf(IsilonRuntimeException::class, $e);
+        }
+
+        try {
+            $this->client->updateExport('Non numeric', ['somenew' => 'values']);
+            $this->assertFalse(true, 'Assertion should not be reachable');
+        } catch (\Exception $e) {
+            $this->assertInstanceOf(\InvalidArgumentException::class, $e);
+        }
+    }
+
+    /**
+     */
+    public function testDeleteExport()
+    {
+        $this->client->setHandler(
+            new MockHandler([
+                new Response(200, ['Content-Type' => 'application/json'], json_encode(['Test' => '123'])),
+                new Response(500)
+            ])
+        );
+
+        $exports = $this->client->deleteExport(1);
+        $this->assertEquals('123', $exports['Test']);
+
+        try {
+            $this->client->deleteExport(4711);
+            $this->assertFalse(true, 'Assertion should not be reachable');
+        } catch (\Exception $e) {
+            $this->assertInstanceOf(IsilonRuntimeException::class, $e);
+        }
+
+        try {
+            $this->client->deleteExport('Non numeric');
+            $this->assertFalse(true, 'Assertion should not be reachable');
+        } catch (\Exception $e) {
+            $this->assertInstanceOf(\InvalidArgumentException::class, $e);
+        }
     }
 }

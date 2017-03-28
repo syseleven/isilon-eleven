@@ -13,7 +13,6 @@
 namespace SysEleven\IsilonEleven;
 
 use GuzzleHttp\Psr7\Request;
-use SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException;
 
 /**
  * Implementation of a simple interface to the mite time tracking api.
@@ -24,6 +23,9 @@ use SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException;
  */
 class IsilonClient implements IsilonInterface
 {
+
+    const ZONE_SYSTEM = 'System';
+    const ZONE_S11CUSTOMERS = 'S11CUSTOMERS';
 
     /**
      * Rest client object
@@ -81,9 +83,9 @@ class IsilonClient implements IsilonInterface
      * @throws \RuntimeException
      * @return array
      */
-    public function listExports($zone = 'S11CUSTOMERS')
+    public function listExports($zone = self::ZONE_S11CUSTOMERS)
     {
-        return $this->callApi('GET', '/platform/2/protocols/nfs/exports?zone=' . $zone);
+        return $this->callApi('GET', '/platform/1/protocols/nfs/exports?zone=' . $zone);
     }
 
     /**
@@ -97,7 +99,7 @@ class IsilonClient implements IsilonInterface
      * @throws \InvalidArgumentException
      * @return array    An array containing the newly created export's id.
      */
-    public function createExport(array $paths, $zone = 'S11CUSTOMERS')
+    public function createExport(array $paths, $zone = self::ZONE_S11CUSTOMERS)
     {
         if (empty($paths)) {
             throw new \InvalidArgumentException('You need to specify at least one path for the new share.');
@@ -108,7 +110,7 @@ class IsilonClient implements IsilonInterface
             'zone' => $zone
         ];
 
-        return $this->callApi('POST', '/platform/2/protocols/nfs/exports', ['json' => $params]);
+        return $this->callApi('POST', '/platform/1/protocols/nfs/exports', ['json' => $params]);
     }
 
     /**
@@ -125,7 +127,7 @@ class IsilonClient implements IsilonInterface
             throw new \InvalidArgumentException('Non-numeric export ID given.');
         }
 
-        return $this->callApi('DELETE', '/platform/2/protocols/nfs/exports/' . $id);
+        return $this->callApi('DELETE', '/platform/1/protocols/nfs/exports/' . $id);
     }
 
     /**
@@ -133,23 +135,16 @@ class IsilonClient implements IsilonInterface
      *
      * @throws \BadMethodCallException
      * @throws \RuntimeException
+     * @throws \InvalidArgumentException
      * @return array
      */
-    public function modifyExport()
+    public function updateExport($id, array $params)
     {
-        return $this->callApi('GET', '/platform/2/protocols/nfs/exports');
-    }
+        if (!is_numeric($id)) {
+            throw new \InvalidArgumentException('Non-numeric export ID given.');
+        }
 
-    /**
-     * Change an export's project assignment
-     *
-     * @throws \BadMethodCallException
-     * @throws \RuntimeException
-     * @return array
-     */
-    public function modifyExportProject()
-    {
-        return $this->callApi('GET', '/platform/2/protocols/nfs/exports');
+        return $this->callApi('PUT', '/platform/1/protocols/nfs/exports/' . $id, ['json' => $params]);
     }
 
     /**
