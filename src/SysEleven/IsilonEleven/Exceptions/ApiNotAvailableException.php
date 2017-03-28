@@ -15,7 +15,7 @@ namespace SysEleven\IsilonEleven\Exceptions;
 
 
 /**
- * CustomerNotFoundException, should be thrown if a customer object cannot be
+ * ApiNotAvailableException, should be thrown if a customer object cannot be
  * found in the backend
  *
  * @author C. Junge <c.junge@syseleven.de>

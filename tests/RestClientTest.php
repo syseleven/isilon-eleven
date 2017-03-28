@@ -20,7 +20,7 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use SysEleven\IsilonEleven\Exceptions\ApiNotAvailableException;
 use SysEleven\IsilonEleven\Exceptions\AuthFailedException;
-use SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException;
+use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
 use SysEleven\IsilonEleven\RestClient;
 
 /**
@@ -86,7 +86,7 @@ class RestClientTest extends \PHPUnit_Framework_TestCase
             $result = $this->restClient->call($request);
             $this->assertEmpty($result);
             $this->assertFalse('Expected Test to throw Exception because condition should not be met');
-        } catch (IsilonRuntimeException $e) {
+        } catch (IsilonRunTimeException $e) {
             $this->assertEquals(2001, $e->getCode());
         }
 
@@ -113,7 +113,7 @@ class RestClientTest extends \PHPUnit_Framework_TestCase
             $request = $this->restClient->createRequest('GET', '/testpath');
             $this->restClient->call($request);
             $this->assertFalse('Expected Test to throw Exception because condition should not be met');
-        } catch (IsilonRuntimeException $e) {
+        } catch (IsilonRunTimeException $e) {
             $this->assertEquals('Cannot decode data', $e->getMessage());
         }
 

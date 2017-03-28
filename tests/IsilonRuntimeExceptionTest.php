@@ -14,7 +14,7 @@
 namespace SysEleven\IsilonEleven\Tests;
 
 use GuzzleHttp\Psr7\Response;
-use SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException;
+use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
 
 
 /**
@@ -27,19 +27,19 @@ class IsilonRuntimeExceptionTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @covers \SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException::__construct
-     * @covers \SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException::getErrorData
-     * @covers \SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException::getResponse
+     * @covers \SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException::__construct
+     * @covers \SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException::getErrorData
+     * @covers \SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException::getResponse
      *
      */
     public function testConstruct()
     {
-        $me = new IsilonRuntimeException('test', 123);
+        $me = new IsilonRunTimeException('test', 123);
 
         $this->assertEquals('test', $me->getMessage());
         $this->assertEquals(123, $me->getCode());
 
-        $me = new IsilonRuntimeException(array(), 123, new Response(500));
+        $me = new IsilonRunTimeException(array(), 123, new Response(500));
 
         $this->assertEquals('Isilon Error', $me->getMessage());
         $this->assertEquals(123, $me->getCode());

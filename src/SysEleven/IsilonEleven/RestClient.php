@@ -21,7 +21,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Request;
 
 use SysEleven\IsilonEleven\Exceptions\AuthFailedException;
-use SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException;
+use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
 use SysEleven\IsilonEleven\Exceptions\ApiNotAvailableException;
 
 /**
@@ -364,7 +364,7 @@ class RestClient implements RestClientInterface
      *
      * @throws ApiNotAvailableException
      * @throws AuthFailedException
-     * @throws IsilonRuntimeException
+     * @throws IsilonRunTimeException
      */
     public function call(Request $request, array $params = [])
     {
@@ -390,12 +390,12 @@ class RestClient implements RestClientInterface
                     self::AUTHENTICATION_ERROR,
                     $ce->getResponse());
             }
-            throw new IsilonRuntimeException($ce->getMessage(),
+            throw new IsilonRunTimeException($ce->getMessage(),
                 $ce->getCode(),
                 null, $ce);
         }
         catch (\Exception $e) {
-            throw new IsilonRuntimeException($e->getMessage(),
+            throw new IsilonRunTimeException($e->getMessage(),
                 $e->getCode(),
                 null, $e);
         }
@@ -409,7 +409,7 @@ class RestClient implements RestClientInterface
             if (empty($type)) {
                 $message = 'No content-type header in response.';
 
-                throw new IsilonRuntimeException($message,
+                throw new IsilonRunTimeException($message,
                     self::ENCODING_ERROR,
                     $response);
             }
@@ -424,7 +424,7 @@ class RestClient implements RestClientInterface
                 if (!is_array($data)) {
                     $message = 'Cannot decode data';
 
-                    throw new IsilonRuntimeException($message,
+                    throw new IsilonRunTimeException($message,
                         self::ENCODING_ERROR,
                         $response);
                 }
@@ -443,11 +443,11 @@ class RestClient implements RestClientInterface
 
         if (!empty($type) && preg_match('/^application\/json/', $type[0])) {
             $data = json_decode($response->getBody(), true);
-            throw new IsilonRuntimeException($data,
+            throw new IsilonRunTimeException($data,
                 $response->getStatusCode());
         }
 
-        throw new IsilonRuntimeException($response->getBody(),
+        throw new IsilonRunTimeException($response->getBody(),
             $response->getStatusCode(),
             $response);
     }

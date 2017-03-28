@@ -16,14 +16,14 @@ namespace SysEleven\IsilonEleven\Exceptions;
 use GuzzleHttp\Psr7\Response;
 
 /**
- * CustomerNotFoundException, should be thrown if a customer object cannot be
+ * IsilonRuntimeException, should be thrown if a customer object cannot be
  * found in the backend
  *
  * @author C. Junge <c.junge@syseleven.de>
  * @version 0.9.1
  * @package SysEleven\IsilonEleven
  */
-class IsilonRuntimeException extends \Exception
+class IsilonRunTimeException extends \Exception
 {
 
     /**

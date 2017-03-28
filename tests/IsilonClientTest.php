@@ -14,7 +14,7 @@ namespace SysEleven\IsilonEleven\Tests;
 
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
-use SysEleven\IsilonEleven\Exceptions\IsilonRuntimeException;
+use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
 use SysEleven\IsilonEleven\IsilonClient;
 use \Mockery as m;
 use SysEleven\IsilonEleven\RestClient;
@@ -90,7 +90,7 @@ class IsilonClientTest extends \PHPUnit_Framework_TestCase {
             $this->client->updateExport(4711, ['somenew' => 'values']);
             $this->assertFalse(true, 'Assertion should not be reachable');
         } catch (\Exception $e) {
-            $this->assertInstanceOf(IsilonRuntimeException::class, $e);
+            $this->assertInstanceOf(IsilonRunTimeException::class, $e);
         }
 
         try {
@@ -119,7 +119,7 @@ class IsilonClientTest extends \PHPUnit_Framework_TestCase {
             $this->client->deleteExport(4711);
             $this->assertFalse(true, 'Assertion should not be reachable');
         } catch (\Exception $e) {
-            $this->assertInstanceOf(IsilonRuntimeException::class, $e);
+            $this->assertInstanceOf(IsilonRunTimeException::class, $e);
         }
 
         try {
