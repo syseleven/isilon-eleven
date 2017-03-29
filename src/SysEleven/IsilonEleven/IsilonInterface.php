@@ -35,5 +35,9 @@ interface IsilonInterface
 
     public function updateExport($id, array $values);
 
-    public function callApi($method, $path, array $parameters = array(), array $headers = []);
+    public function createDirectory($path);
+
+    public function deleteDirectory($path);
+
+    public function callApi($method, $path, array $parameters = [], array $headers = []);
 }

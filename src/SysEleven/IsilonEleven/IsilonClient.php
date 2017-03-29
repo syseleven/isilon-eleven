@@ -148,6 +148,47 @@ class IsilonClient implements IsilonInterface
     }
 
     /**
+     * Creates a directory if it doesn't exist.
+     *
+     * @param $path
+     * @return array|string
+     * @throws \BadMethodCallException
+     * @throws \InvalidArgumentException
+     * @throws \RuntimeException
+     */
+    public function createDirectory($path)
+    {
+        if (mb_substr($path, 0, 1) !== '/') {
+            throw new \InvalidArgumentException('Use absolute paths starting with a slash.');
+        }
+
+        return $this->callApi(
+            'PUT',
+            '/namespace' . $path . '?overwrite=false',
+            [],
+            ['x-isi-ifs-target-type' => 'container']
+        );
+    }
+
+    /**
+     * Deletes a directory if empty, otherwise return error.
+     *
+     * @param $path
+     * @return array|string
+     * @throws \BadMethodCallException
+     * @throws \InvalidArgumentException
+     * @throws \RuntimeException
+     */
+    public function deleteDirectory($path)
+    {
+        if (mb_substr($path, 0, 1) !== '/') {
+            throw new \InvalidArgumentException('Use absolute paths starting with a slash.');
+        }
+
+        return $this->callApi('DELETE', '/namespace' . $path);
+    }
+
+    /**
      * Prepares the $request object and sends it to call()
      *
      * @param string $method
@@ -159,7 +200,7 @@ class IsilonClient implements IsilonInterface
      * @throws \BadMethodCallException
      * @throws \RuntimeException
      */
-    public function callApi($method, $path, array $parameters = array(), array $headers = [])
+    public function callApi($method, $path, array $parameters = [], array $headers = [])
     {
         if ("" === $path) {
             throw new \BadMethodCallException('No path provided.');
