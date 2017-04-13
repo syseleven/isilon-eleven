@@ -16,7 +16,6 @@ The requirements are pretty basic:
 
 and for development or if you want to run the tests:
 
-- mockery/mockery
 - phpunit >= 3.6
 
 Installation
@@ -51,7 +50,7 @@ Usage
 
 Use the client as follows:
 
-     $client = new RestClient('https://localhost:8080');
+     $client = new RestClient('https://isilonurl.com');
 
      $client->setUsername('username');
      $client->setPassword('password');

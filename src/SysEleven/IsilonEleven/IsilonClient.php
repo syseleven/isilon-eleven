@@ -75,7 +75,7 @@ class IsilonClient implements IsilonInterface
     }
 
     /**
-     * Get a summary of all the existent shares on Isilon NAS
+     * Get a summary of all the existent NFS shares on Isilon NAS
      *
      * @param string $zone  Specifies zone
      *
@@ -89,7 +89,7 @@ class IsilonClient implements IsilonInterface
     }
 
     /**
-     * Create a new share on Isilon NAS
+     * Create a new NFS share on Isilon NAS
      *
      * @param array $paths    Paths of the share to create
      * @param string $zone    Zone which the newly created share should belong to
@@ -106,15 +106,14 @@ class IsilonClient implements IsilonInterface
         }
 
         $params = [
-            'paths' => $paths,
-            'zone' => $zone
+            'paths' => $paths
         ];
 
-        return $this->callApi('POST', '/platform/2/protocols/nfs/exports', ['json' => $params]);
+        return $this->callApi('POST', '/platform/2/protocols/nfs/exports?zone=' . $zone, ['json' => $params]);
     }
 
     /**
-     * Delete a share
+     * Delete an NFS share
      *
      * @throws \BadMethodCallException
      * @throws \InvalidArgumentException
@@ -124,14 +123,14 @@ class IsilonClient implements IsilonInterface
     public function deleteExport($id)
     {
         if (!is_numeric($id)) {
-            throw new \InvalidArgumentException('Non-numeric export ID given.');
+            throw new \InvalidArgumentException('Non-numeric export ID ' . $id . ' given.');
         }
 
         return $this->callApi('DELETE', '/platform/2/protocols/nfs/exports/' . $id);
     }
 
     /**
-     * Modify an existing share
+     * Modify an existing NFS share
      *
      * @throws \BadMethodCallException
      * @throws \RuntimeException
@@ -141,7 +140,7 @@ class IsilonClient implements IsilonInterface
     public function updateExport($id, array $params)
     {
         if (!is_numeric($id)) {
-            throw new \InvalidArgumentException('Non-numeric export ID given.');
+            throw new \InvalidArgumentException('Non-numeric export ID ' . $id . ' given.');
         }
 
         return $this->callApi('PUT', '/platform/2/protocols/nfs/exports/' . $id, ['json' => $params]);
