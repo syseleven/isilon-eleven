@@ -115,10 +115,9 @@ class IsilonClient implements IsilonInterface
     /**
      * Delete an NFS share
      *
-     * @throws \BadMethodCallException
-     * @throws \InvalidArgumentException
-     * @throws \RuntimeException
-     * @return array
+     * @param $id
+     * @param string $zone
+     * @return array|string
      */
     public function deleteExport($id, $zone = self::ZONE_S11CUSTOMERS)
     {
@@ -132,18 +131,21 @@ class IsilonClient implements IsilonInterface
     /**
      * Modify an existing NFS share
      *
+     * @param $id
+     * @param array $params
+     * @param string $zone
      * @throws \BadMethodCallException
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      * @return array
      */
-    public function updateExport($id, array $params)
+    public function updateExport($id, array $params, $zone = self::ZONE_S11CUSTOMERS)
     {
         if (!is_numeric($id)) {
             throw new \InvalidArgumentException('Non-numeric export ID ' . $id . ' given.');
         }
 
-        return $this->callApi('PUT', '/platform/2/protocols/nfs/exports/' . $id, ['json' => $params]);
+        return $this->callApi('PUT', '/platform/2/protocols/nfs/exports/' . $id . '?zone=' . $zone, ['json' => $params]);
     }
 
     /**
