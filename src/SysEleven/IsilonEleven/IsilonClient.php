@@ -120,13 +120,13 @@ class IsilonClient implements IsilonInterface
      * @throws \RuntimeException
      * @return array
      */
-    public function deleteExport($id)
+    public function deleteExport($id, $zone = self::ZONE_S11CUSTOMERS)
     {
         if (!is_numeric($id)) {
             throw new \InvalidArgumentException('Non-numeric export ID ' . $id . ' given.');
         }
 
-        return $this->callApi('DELETE', '/platform/2/protocols/nfs/exports/' . $id);
+        return $this->callApi('DELETE', '/platform/2/protocols/nfs/exports/' . $id . '?zone=' . $zone);
     }
 
     /**
@@ -180,6 +180,7 @@ class IsilonClient implements IsilonInterface
      */
     public function deleteDirectory($path)
     {
+        // TODO maybe check if directory not empty
         if (mb_substr($path, 0, 1) !== '/') {
             throw new \InvalidArgumentException('Use absolute paths starting with a slash.');
         }
