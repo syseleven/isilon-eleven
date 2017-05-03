@@ -91,22 +91,24 @@ class IsilonClient implements IsilonInterface
     /**
      * Create a new NFS share on Isilon NAS
      *
-     * @param array $paths    Paths of the share to create
-     * @param string $zone    Zone which the newly created share should belong to
+     * @param array $paths          Paths of the share to create
+     * @param string $zone          Zone which the newly created share should belong to
+     * @param string $description   Description for newly created share
      *
      * @throws \BadMethodCallException
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
      * @return array    An array containing the newly created export's id.
      */
-    public function createExport(array $paths, $zone = self::ZONE_S11CUSTOMERS)
+    public function createExport(array $paths, $zone = self::ZONE_S11CUSTOMERS, $description = '')
     {
         if (empty($paths)) {
             throw new \InvalidArgumentException('You need to specify at least one path for the new share.');
         }
 
         $params = [
-            'paths' => $paths
+            'paths' => $paths,
+            'description' => $description
         ];
 
         return $this->callApi('POST', '/platform/2/protocols/nfs/exports?zone=' . $zone, ['json' => $params]);
@@ -182,7 +184,6 @@ class IsilonClient implements IsilonInterface
      */
     public function deleteDirectory($path)
     {
-        // TODO maybe check if directory not empty
         if (mb_substr($path, 0, 1) !== '/') {
             throw new \InvalidArgumentException('Use absolute paths starting with a slash.');
         }
