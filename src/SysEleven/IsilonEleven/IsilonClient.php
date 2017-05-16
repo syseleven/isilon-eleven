@@ -24,9 +24,6 @@ use GuzzleHttp\Psr7\Request;
 class IsilonClient implements IsilonInterface
 {
 
-    const ZONE_SYSTEM = 'System';
-    const ZONE_S11CUSTOMERS = 'S11CUSTOMERS';
-
     /**
      * Rest client object
      *
@@ -35,13 +32,19 @@ class IsilonClient implements IsilonInterface
     protected $_rest;
 
     /**
+     * @var string
+     */
+    protected $defaultZone;
+
+    /**
      * IsilonClient constructor.
      *
      * @param RestClientInterface $rest
      */
-    public function __construct(RestClientInterface $rest)
+    public function __construct(RestClientInterface $rest, $defaultZone)
     {
         $this->_rest = $rest;
+        $this->defaultZone = $defaultZone;
     }
 
     /**
@@ -83,8 +86,12 @@ class IsilonClient implements IsilonInterface
      * @throws \RuntimeException
      * @return array
      */
-    public function listExports($zone = self::ZONE_S11CUSTOMERS)
+    public function listExports($zone = null)
     {
+        if (null === $zone) {
+            $zone = $this->defaultZone;
+        }
+
         return $this->callApi('GET', '/platform/1/protocols/nfs/exports?zone=' . $zone);
     }
 
@@ -100,10 +107,14 @@ class IsilonClient implements IsilonInterface
      * @throws \InvalidArgumentException
      * @return array    An array containing the newly created export's id.
      */
-    public function createExport(array $paths, $zone = self::ZONE_S11CUSTOMERS, $description = '')
+    public function createExport(array $paths, $zone = null, $description = '')
     {
         if (empty($paths)) {
             throw new \InvalidArgumentException('You need to specify at least one path for the new share.');
+        }
+
+        if (null === $zone) {
+            $zone = $this->defaultZone;
         }
 
         $params = [
@@ -121,10 +132,12 @@ class IsilonClient implements IsilonInterface
      * @param string $zone
      * @return array|string
      */
-    public function deleteExport($id, $zone = self::ZONE_S11CUSTOMERS)
+    public function deleteExport($id, $zone = null)
     {
-        if (!is_numeric($id)) {
-            throw new \InvalidArgumentException('Non-numeric export ID ' . $id . ' given.');
+        $this->checkIsPositiveNumber($id);
+
+        if (null === $zone) {
+            $zone = $this->defaultZone;
         }
 
         return $this->callApi('DELETE', '/platform/2/protocols/nfs/exports/' . $id . '?zone=' . $zone);
@@ -141,10 +154,12 @@ class IsilonClient implements IsilonInterface
      * @throws \InvalidArgumentException
      * @return array
      */
-    public function updateExport($id, array $params, $zone = self::ZONE_S11CUSTOMERS)
+    public function updateExport($id, array $params, $zone = null)
     {
-        if (!is_numeric($id)) {
-            throw new \InvalidArgumentException('Non-numeric export ID ' . $id . ' given.');
+        $this->checkIsPositiveNumber($id);
+
+        if (null === $zone) {
+            $zone = $this->defaultZone;
         }
 
         return $this->callApi('PUT', '/platform/2/protocols/nfs/exports/' . $id . '?zone=' . $zone, ['json' => $params]);
@@ -215,4 +230,16 @@ class IsilonClient implements IsilonInterface
         return $this->getClient()->call($request, $parameters);
     }
 
+    /**
+     * @param $argument
+     */
+    private function checkIsPositiveNumber($argument) {
+        if (!is_int($argument)) {
+            throw new \InvalidArgumentException('Non-numeric export ID ' . $argument . ' given.');
+        }
+
+        if ($argument < 1) {
+            throw new \InvalidArgumentException('Invalid export ID ' . $argument . ' given.');
+        }
+    }
 }
