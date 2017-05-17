@@ -113,6 +113,10 @@ class IsilonClient implements IsilonInterface
             throw new \InvalidArgumentException('You need to specify at least one path for the new share.');
         }
 
+        if (in_array(null, $paths, true) || in_array('', $paths, true)) {
+            throw new \InvalidArgumentException('Empty path element given.');
+        }
+
         if (null === $zone) {
             $zone = $this->defaultZone;
         }
