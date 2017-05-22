@@ -211,6 +211,30 @@ class IsilonClient implements IsilonInterface
     }
 
     /**
+     * Checks if directory exists
+     *
+     * @param $path
+     * @return array|string
+     * @throws \BadMethodCallException
+     * @throws \InvalidArgumentException
+     * @throws \RuntimeException
+     */
+    public function directoryExists($path)
+    {
+        if (mb_substr($path, 0, 1) !== '/') {
+            throw new \InvalidArgumentException('Use absolute paths starting with a slash.');
+        }
+
+        try {
+            $this->callApi('GET', '/namespace' . $path);
+        } catch (\Exception $e) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
      * Prepares the $request object and sends it to call()
      *
      * @param string $method
