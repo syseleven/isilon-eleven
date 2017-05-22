@@ -13,6 +13,7 @@
 namespace SysEleven\IsilonEleven;
 
 use GuzzleHttp\Psr7\Request;
+use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
 
 /**
  * Implementation of a simple interface to the mite time tracking api.
@@ -228,7 +229,11 @@ class IsilonClient implements IsilonInterface
         try {
             $this->callApi('GET', '/namespace' . $path);
         } catch (\Exception $e) {
-            return false;
+            if (404 === $e->getCode()) {
+                return false;
+            }
+
+            throw $e;
         }
 
         return true;
