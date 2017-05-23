@@ -97,6 +97,22 @@ class IsilonClient implements IsilonInterface
     }
 
     /**
+     * Get data of one share
+     *
+     * @param int $id  Specifies share id
+     *
+     * @throws \BadMethodCallException
+     * @throws \RuntimeException
+     * @return array
+     */
+    public function getExport($id)
+    {
+        $this->checkIsPositiveNumber($id);
+
+        return $this->callApi('GET', '/platform/1/protocols/nfs/exports/' . $id);
+    }
+
+    /**
      * Create a new NFS share on Isilon NAS
      *
      * @param array $paths          Paths of the share to create
@@ -215,10 +231,9 @@ class IsilonClient implements IsilonInterface
      * Checks if directory exists
      *
      * @param $path
-     * @return array|string
-     * @throws \BadMethodCallException
-     * @throws \InvalidArgumentException
-     * @throws \RuntimeException
+     *
+     * @return bool
+     * @throws \Exception
      */
     public function directoryExists($path)
     {
@@ -228,6 +243,31 @@ class IsilonClient implements IsilonInterface
 
         try {
             $this->callApi('GET', '/namespace' . $path);
+        } catch (\Exception $e) {
+            if (404 === $e->getCode()) {
+                return false;
+            }
+
+            throw $e;
+        }
+
+        return true;
+    }
+
+    /**
+     * Check if share exists
+     *
+     * @param int $id Specifies share id
+     *
+     * @return bool
+     * @throws \Exception
+     */
+    public function exportExists($id)
+    {
+        $this->checkIsPositiveNumber($id);
+
+        try {
+            $this->callApi('GET', '/platform/1/protocols/nfs/exports/' . $id);
         } catch (\Exception $e) {
             if (404 === $e->getCode()) {
                 return false;
