@@ -109,7 +109,7 @@ class IsilonClient implements IsilonInterface
     {
         $this->checkIsPositiveNumber($id);
 
-        return $this->callApi('GET', '/platform/1/protocols/nfs/exports/' . $id);
+        return $this->callApi('GET', '/platform/1/protocols/nfs/exports/' . $id)['exports'][0];
     }
 
     /**
