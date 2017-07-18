@@ -262,15 +262,20 @@ class IsilonClient implements IsilonInterface
      *
      * @param int $id Specifies share id
      *
+     * @param string $zone
      * @return bool
      * @throws \Exception
      */
-    public function exportExists($id)
+    public function exportExists($id, $zone = null)
     {
         $this->checkIsPositiveNumber($id);
 
         try {
-            $this->callApi('GET', '/platform/1/protocols/nfs/exports/' . $id);
+            if (null === $zone) {
+                $zone = $this->defaultZone;
+            }
+
+            $this->callApi('GET', '/platform/1/protocols/nfs/exports/' . $id, ['query' => ['zone' => $zone]]);
         } catch (\Exception $e) {
             if (404 === $e->getCode()) {
                 return false;
