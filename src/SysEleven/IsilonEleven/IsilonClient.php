@@ -13,7 +13,6 @@
 namespace SysEleven\IsilonEleven;
 
 use GuzzleHttp\Psr7\Request;
-use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
 
 /**
  * Implementation of a simple interface to the mite time tracking api.
@@ -93,23 +92,27 @@ class IsilonClient implements IsilonInterface
             $zone = $this->defaultZone;
         }
 
-        return $this->callApi('GET', '/platform/1/protocols/nfs/exports?zone=' . $zone);
+        return $this->callApi('GET', '/platform/2/protocols/nfs/exports', ['zone' => $zone]);
     }
 
     /**
      * Get data of one share
      *
-     * @param int $id  Specifies share id
+     * @param int $id Specifies share id
+     * @param string $zone
      *
-     * @throws \BadMethodCallException
-     * @throws \RuntimeException
      * @return array
+     * @throws \BadMethodCallException
      */
-    public function getExport($id)
+    public function getExport($id, $zone = null)
     {
         $this->checkIsPositiveNumber($id);
 
-        return $this->callApi('GET', '/platform/1/protocols/nfs/exports/' . $id)['exports'][0];
+        if (null === $zone) {
+            $zone = $this->defaultZone;
+        }
+
+        return $this->callApi('GET', '/platform/2/protocols/nfs/exports/' . $id, ['zone' => $zone])['exports'][0];
     }
 
     /**
@@ -315,4 +318,25 @@ class IsilonClient implements IsilonInterface
             throw new \InvalidArgumentException('Invalid export ID ' . $argument . ' given.');
         }
     }
+
+    /**
+     * @return string
+     */
+    public function getDefaultZone()
+    {
+        return $this->defaultZone;
+    }
+
+    /**
+     * @param string $defaultZone
+     * @return IsilonClient
+     */
+    public function setDefaultZone($defaultZone)
+    {
+        $this->defaultZone = $defaultZone;
+
+        return $this;
+    }
+
+
 }
