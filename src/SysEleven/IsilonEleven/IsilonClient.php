@@ -13,6 +13,7 @@
 namespace SysEleven\IsilonEleven;
 
 use GuzzleHttp\Psr7\Request;
+use SysEleven\IsilonEleven\Exceptions\IsilonNotFoundException;
 
 /**
  * Implementation of a simple interface to the mite time tracking api.
@@ -288,6 +289,195 @@ class IsilonClient implements IsilonInterface
     }
 
     /**
+     * List all or matching quotas. Can also be used to retrieve quota state from
+     * existing reports. For any query argument not supplied, the default behavior
+     * is return all.
+     *
+     * Possible parameters are:
+     *
+     * enforced=<boolean> Only list quotas with this enforcement (non-accounting).
+     * persona=<string> Only list user or group quotas matching this persona (must be used with the corresponding
+     * type argument).  Format is <PERSONA_TYPE>:<string/integer>, where PERSONA_TYPE is one of USER,GROUP, SID, ID, or GID.
+     * zone=<string> Optional named zone to use for user and group resolution.
+     * resume=<string> Continue returning results from previous call using this token (token should come from the
+     * previous call, resume cannot be used with other options).
+     * recurse_path_children=<boolean> If used with the path argument, match all quotas at that path or any descendent sub-directory.
+     * resolve_names=<boolean> If true, resolve group and user names in personas.
+     * recurse_path_parents=<boolean> If used with the path argument, match all quotas at that path or any parent directory.
+     * include_snapshots=<boolean>Only list quotas with this setting for include_snapshots.
+     * exceeded=<boolean> Set to true to only list quotas which have exceeded one or more of their thresholds.
+     * path=<string> Only list quotas matching this path (see also recurse_path_*).
+     * type=[directory|user|group|default-user|default-group] Only list quotas matching this type.
+     * dir=[ASC|DESC] The direction of the sort.
+     * report_id=<string> Use the named report as a source rather than the live quotas. See the /q/quota/reports resource for a list of valid reports.
+     *
+     * @param array $params
+     * @return array|string
+     * @throws \BadMethodCallException
+     */
+    public function listQuotas(array $params = [])
+    {
+        $valid = ['enforced', 'persona', 'zone', 'resume', 'recurse_path_children',
+            'recurse_path_parents', 'resolve_names', 'include_snapshots', 'exceeded',
+            'path', 'type', 'dir', 'report_id'];
+
+        $use = [];
+        foreach ($params AS $k => $v) {
+            if (in_array($k, $valid, true)) {
+                $use[$k] = $v;
+            }
+        }
+
+        return $this->callApi('GET', '/platform/1/quota/quotas', ['query' => $use]);
+    }
+
+    /**
+     * Returns the quota for the given id. if the quota is not found a IsilonNotFoundException is raised
+     *
+     * @param string $quotaId
+     * @return array|bool|string
+     * @throws \Exception
+     */
+    public function getQuota($quotaId)
+    {
+        if ($quotaId === '') {
+            throw new \BadMethodCallException('You must provide a valid id for the quota to inquire');
+        }
+
+        $res = $this->callApi('GET', '/platform/1/quota/quotas/'.$quotaId);
+
+        return $res['quotas'][0];
+    }
+
+    /**
+     * Returns the quotas for the given path, if no quota for the given path is found an
+     * IsilonNotFoundException is raised.
+     *
+     * @param string $path
+     * @return array|string
+     */
+    public function getQuotaForPath($path = null)
+    {
+        if ($path === '') {
+            throw new \BadMethodCallException('You must provide a path to search for');
+        }
+
+        $params = ['path' => $path];
+
+        return $this->listQuotas($params);
+    }
+
+    /**
+     * Creates a new quota for the given path and returns the id of the quota
+     *
+     * @param string $path
+     * @param int $hard in bytes
+     * @param int $soft in bytes
+     * @param array|null $defaults
+     * @return string
+     * @throws \RuntimeException
+     * @throws \BadMethodCallException
+     */
+    public function createQuota($path = null, $hard = null, $soft = null, array $defaults = null)
+    {
+        if (null === $defaults) {
+            $defaults = $this->getQuotaDefaults();
+        }
+
+        if (null !== $hard) {
+            $this->checkIsPositiveNumber($hard);
+            $defaults['thresholds']['hard'] = $hard;
+        }
+
+        if (null !== $soft) {
+            $this->checkIsPositiveNumber($soft);
+            $defaults['thresholds']['soft'] = $soft;
+        }
+
+        if ('' === $path || $path === '/ifs/data' || $path === '/ifs') {
+            throw new \BadMethodCallException('You must provide a valid path');
+        }
+
+        $defaults['path'] = $path;
+
+        $res = $this->callApi('POST', '/platform/1/quota/quotas', ['json' => $defaults]);
+
+        return $res['id'];
+    }
+
+    /**
+     * @param $quotaId
+     * @param int null $hard
+     * @param int null $soft
+     * @param int $grace Grace period in days
+     * @return array|string
+     * @throws \Exception
+     */
+    public function modifyQuota($quotaId, $hard = null, $soft = null, $grace = 7)
+    {
+        $this->getQuota($quotaId);
+
+        $data = [];
+
+        if (null !== $hard) {
+            $this->checkIsPositiveNumber($hard);
+            $data['hard'] = $hard;
+        }
+
+        if (null !== $soft) {
+            $this->checkIsPositiveNumber($soft);
+            $data['soft'] = $soft;
+        }
+
+        $this->checkIsPositiveNumber($grace);
+
+        if (0 === count($data)) {
+            throw new \BadMethodCallException('You must provide a value to change');
+        }
+
+        /** @noinspection SummerTimeUnsafeTimeManipulationInspection */
+        $data['soft_grace'] = $grace * 86400;
+
+        $params = ['thresholds' => $data];
+
+        return $this->callApi('PUT', '/platform/1/quota/quotas/'.$quotaId, ['json' => $params]);
+    }
+
+    /**
+     * Deletes the given quota
+     *
+     * @param $quotaId
+     * @return array|string
+     */
+    public function deleteQuota($quotaId)
+    {
+        $this->getQuota($quotaId);
+
+        return $this->callApi('DELETE', '/platform/1/quota/quotas/'.$quotaId);
+    }
+
+    /**
+     * @return array
+     */
+    public function getQuotaDefaults()
+    {
+        $defaults = [
+            'container' => true,
+            'enforced' => true,
+            'force' => false,
+            'include_snapshots' => false,
+            'thresholds' => [
+                'advisory' => null,
+                'hard' => 10995116277760,
+                'soft' => 9895604649984,
+                'soft_grace' => 604800],
+            'thresholds_include_overhead' => false,
+            'type' => 'directory'];
+
+        return $defaults;
+    }
+
+    /**
      * Prepares the $request object and sends it to call()
      *
      * @param string $method
@@ -342,6 +532,4 @@ class IsilonClient implements IsilonInterface
 
         return $this;
     }
-
-
 }

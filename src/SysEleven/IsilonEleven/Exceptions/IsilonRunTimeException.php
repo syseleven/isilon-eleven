@@ -51,14 +51,22 @@ class IsilonRunTimeException extends \Exception
      */
     public function __construct($message, $code, $extraData = null, \Exception $previous = null)
     {
-        if (is_array($message)) {
-            $this->data = $message;
-
-            $message = 'Isilon Error';
-        }
+        $this->data = $extraData;
 
         if ($extraData instanceof Response) {
             $this->response = $extraData;
+
+            $body = (string) $this->response->getBody();
+            $this->data = [];
+
+            $json = json_decode($body, true);
+            if ($json) {
+                $this->data = $json;
+            }
+        }
+
+        if ($message === '') {
+            $message = 'Isilon Error';
         }
 
         parent::__construct($message, $code, $previous);

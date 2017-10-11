@@ -14,6 +14,7 @@
 namespace SysEleven\IsilonEleven\Tests;
 
 use GuzzleHttp\Psr7\Response;
+use PHPUnit\Framework\TestCase;
 use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
 
 
@@ -23,7 +24,7 @@ use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
  * @package
  * @subpackage
  */
-class IsilonRuntimeExceptionTest extends \PHPUnit_Framework_TestCase
+class IsilonRuntimeExceptionTest extends TestCase
 {
 
     /**
@@ -39,7 +40,7 @@ class IsilonRuntimeExceptionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('test', $me->getMessage());
         $this->assertEquals(123, $me->getCode());
 
-        $me = new IsilonRunTimeException(array(), 123, new Response(500));
+        $me = new IsilonRunTimeException('', 123, new Response(500));
 
         $this->assertEquals('Isilon Error', $me->getMessage());
         $this->assertEquals(123, $me->getCode());

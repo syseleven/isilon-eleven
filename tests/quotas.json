@@ -1,0 +1,2977 @@
+
+{
+"quotas" : 
+[
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "4DG2AAEAAAAAAAAAAAAAQJYAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/mayersche/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 26028450,
+"logical" : 2805199268216,
+"physical" : 6901367689216
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "VSC9AAEAAAAAAAAAAAAAQLYAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/mayersche/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 7401432,
+"logical" : 459773390250,
+"physical" : 1399989968384
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "jQDDAAEAAAAAAAAAAAAAQKIAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/expert/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 7083667,
+"logical" : 272247259153,
+"physical" : 1041015897088
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "1gDDAAEAAAAAAAAAAAAAQMoAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/atv/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 246700,
+"logical" : 889179269995,
+"physical" : 1478946810880
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "TA7tAgEAAAAAAAAAAAAAQJ8AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/toptarif/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "VA7tAgEAAAAAAAAAAAAAQLcAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/commercecockpit/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "gHbuAgEAAAAAAAAAAAAAQIwAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/tcs/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 286446,
+"logical" : 40526877124058,
+"physical" : 67890739331584
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "hnbuAgEAAAAAAAAAAAAAQM4AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/audicity/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 330102,
+"logical" : 2575210437521,
+"physical" : 4368286075392
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "iHbuAgEAAAAAAAAAAAAAQIcAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/tvnext/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 118852,
+"logical" : 1062661184877,
+"physical" : 1799140592640
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "zUTyAgEAAAAAAAAAAAAAQMwAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/adamhall/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "0ETyAgEAAAAAAAAAAAAAQNEAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/garantmoebel/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 387809,
+"logical" : 49313066241,
+"physical" : 142031992320
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "0kTyAgEAAAAAAAAAAAAAQL8AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/daparto/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 2582097,
+"logical" : 271902722610,
+"physical" : 853415881216
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "10TyAgEAAAAAAAAAAAAAQKAAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/rtl/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 620041,
+"logical" : 98413416747,
+"physical" : 258991736832
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "2UTyAgEAAAAAAAAAAAAAQKgAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/closed/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 80209,
+"logical" : 166723649131,
+"physical" : 296540212736
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "3ETyAgEAAAAAAAAAAAAAQKcAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/atv/share3",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 271105,
+"logical" : 32780154324,
+"physical" : 77019303936
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "zkz0AgEAAAAAAAAAAAAAQJcAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/atv/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 2201114,
+"logical" : 2854592007790,
+"physical" : 4990226845184
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "2kz0AgEAAAAAAAAAAAAAQNkAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/merchstore/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 85124,
+"logical" : 9246100130,
+"physical" : 29195803648
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "tLr1AgEAAAAAAAAAAAAAQIkAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/bluepoint/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 13969,
+"logical" : 44028163458,
+"physical" : 75228958208
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "uLr1AgEAAAAAAAAAAAAAQNYAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/medimops/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 5938712,
+"logical" : 762847091196,
+"physical" : 1538187321344
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "vLr1AgEAAAAAAAAAAAAAQIIAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/fadenversand/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 550138,
+"logical" : 110141720839,
+"physical" : 228037522944
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "cT0KAwEAAAAAAAAAAAAAQIoAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/tvnext/tvnext/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 104262,
+"logical" : 938993959807,
+"physical" : 1589778910720
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "atsNAwEAAAAAAAAAAAAAQJ4AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/gutscheinconnection/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 154155,
+"logical" : 763503711802,
+"physical" : 1289310283776
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "J4gVAwEAAAAAAAAAAAAAQKQAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/gravis/share4",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 611503,
+"logical" : 71579642566,
+"physical" : 187422232576
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "KogVAwEAAAAAAAAAAAAAQMYAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/olsen/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 70718,
+"logical" : 94296499378,
+"physical" : 172390708736
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "LogVAwEAAAAAAAAAAAAAQM0AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/bkkvbu/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 233261,
+"logical" : 49963250923,
+"physical" : 105097411584
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "NIgVAwEAAAAAAAAAAAAAQKsAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/tvnextcloud/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 129393,
+"logical" : 15374137498769,
+"physical" : 25769118906368
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "loEYAwEAAAAAAAAAAAAAQNgAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/sportschuster/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 961261,
+"logical" : 19448936902,
+"physical" : 99564038144
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "QCUfAwEAAAAAAAAAAAAAQMMAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/tennispoint/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 2782232,
+"logical" : 417868896315,
+"physical" : 1176042049024
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "5VkjAwEAAAAAAAAAAAAAQIUAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/mygall/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1657544,
+"logical" : 218938545799,
+"physical" : 491079874048
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "TBgmAwEAAAAAAAAAAAAAQHwAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/adamhall/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1007,
+"logical" : 881805537,
+"physical" : 1705901568
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "07UsAwEAAAAAAAAAAAAAQNcAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/mite/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 334936,
+"logical" : 25276201150,
+"physical" : 117315186176
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "3LUsAwEAAAAAAAAAAAAAQJQAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/verticalmedia/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 310767,
+"logical" : 22042246540,
+"physical" : 76331718144
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "3rUsAwEAAAAAAAAAAAAAQLwAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/schuhtempel/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 3056454,
+"logical" : 176400411351,
+"physical" : 823884202496
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "4bUsAwEAAAAAAAAAAAAAQIAAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/entwicklerdotcom/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 798880,
+"logical" : 111615212786,
+"physical" : 285602242048
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "pJcxAwEAAAAAAAAAAAAAQK0AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/shopmachercloud/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 2152715,
+"logical" : 724796085248,
+"physical" : 1601014043648
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "qZcxAwEAAAAAAAAAAAAAQJgAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/twocream/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 28157,
+"logical" : 118858993127,
+"physical" : 204648097280
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "8_k4AwEAAAAAAAAAAAAAQKoAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/babymarkt/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 8751776,
+"logical" : 603915015769,
+"physical" : 2261836039168
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "9fk4AwEAAAAAAAAAAAAAQLAAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/digifoto/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "_Pk4AwEAAAAAAAAAAAAAQLkAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/ifun/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 138025,
+"logical" : 2067250093,
+"physical" : 9875992064
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "__k4AwEAAAAAAAAAAAAAQL0AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/tvnext/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 49221,
+"logical" : 433050883113,
+"physical" : 732272381952
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "9_FIAwEAAAAAAAAAAAAAQH8AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/babymarkt/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 7,
+"logical" : 18358474,
+"physical" : 32067072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "A_JIAwEAAAAAAAAAAAAAQKYAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/designdreitausend/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 726989,
+"logical" : 141304960423,
+"physical" : 322634848768
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "B_JIAwEAAAAAAAAAAAAAQJAAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/schiesser/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 3971,
+"logical" : 10428275398,
+"physical" : 18037965824
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "np1UAwEAAAAAAAAAAAAAQNwAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/tausendkind/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 6481513,
+"logical" : 827869372387,
+"physical" : 2258590590976
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "pJ1UAwEAAAAAAAAAAAAAQLsAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/getgoods/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "q51UAwEAAAAAAAAAAAAAQNoAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/vbb/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 52863,
+"logical" : 15991310742,
+"physical" : 34558909952
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "r51UAwEAAAAAAAAAAAAAQJMAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/ezeep/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 70459,
+"logical" : 2107631,
+"physical" : 243434496
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "s51UAwEAAAAAAAAAAAAAQMIAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/kofferdirekt/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 169629,
+"logical" : 243603529663,
+"physical" : 423700934144
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "rrZVAwEAAAAAAAAAAAAAQIEAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/monoqi/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 3663520,
+"logical" : 343681226147,
+"physical" : 1284441155584
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "s7ZVAwEAAAAAAAAAAAAAQMgAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/eurotops/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1094401,
+"logical" : 104879520940,
+"physical" : 374649351168
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "tbZVAwEAAAAAAAAAAAAAQNQAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/telekomtv/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 2211260,
+"logical" : 888953187788,
+"physical" : 1634678298624
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "uJNYAwEAAAAAAAAAAAAAQKkAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/gravis/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 691498,
+"logical" : 126910032829,
+"physical" : 266112505344
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "wpNYAwEAAAAAAAAAAAAAQMEAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/heingerickeshop/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1922563,
+"logical" : 142589374619,
+"physical" : 369571187712
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "2JZYAwEAAAAAAAAAAAAAQKUAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/brandeins/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 199894,
+"logical" : 93948165021,
+"physical" : 192073368064
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "FotcAwEAAAAAAAAAAAAAQKEAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/daparto/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 51573,
+"logical" : 182479287063,
+"physical" : 310053687808
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "GYtcAwEAAAAAAAAAAAAAQLoAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/top10berlin/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 155115,
+"logical" : 17975649794,
+"physical" : 49961659392
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "HItcAwEAAAAAAAAAAAAAQLUAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/smapi/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "H4tcAwEAAAAAAAAAAAAAQK8AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/zooroyal/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 5281246,
+"logical" : 198279754174,
+"physical" : 807709379584
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "J4tcAwEAAAAAAAAAAAAAQLgAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/bergfreunde/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 2514594,
+"logical" : 196187725795,
+"physical" : 689398753792
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "KotcAwEAAAAAAAAAAAAAQNMAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/udobaer/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 4434524,
+"logical" : 107692185875,
+"physical" : 358146095616
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "YSChBQEAAAAAAAAAAAAAQKMAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/gravis/share3",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 640122,
+"logical" : 75302284520,
+"physical" : 171937876480
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "ZCChBQEAAAAAAAAAAAAAQJwAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/outfitter/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1788893,
+"logical" : 662858710897,
+"physical" : 1366190803456
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "ayChBQEAAAAAAAAAAAAAQIMAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/geschenkidee/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1059878,
+"logical" : 103658686936,
+"physical" : 300090719744
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "bSChBQEAAAAAAAAAAAAAQH4AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/light11/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 283002,
+"logical" : 63776836853,
+"physical" : 160630418944
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "byChBQEAAAAAAAAAAAAAQMkAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/bkkvbu/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 192601,
+"logical" : 31474798474,
+"physical" : 65307019264
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "cSChBQEAAAAAAAAAAAAAQJoAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/infinigate/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "vPCrBQEAAAAAAAAAAAAAQJsAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/dailyme/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 884760,
+"logical" : 5467417616329,
+"physical" : 9382563977216
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "btGuBQEAAAAAAAAAAAAAQKwAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/golem/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1897736,
+"logical" : 2404932088047,
+"physical" : 4234307420160
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "hNGuBQEAAAAAAAAAAAAAQLMAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/brandeins/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 63705,
+"logical" : 71096761858,
+"physical" : 138591280128
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "qLGxBQEAAAAAAAAAAAAAQMQAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/allnaturawebshop/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 34482,
+"logical" : 1231908,
+"physical" : 123883520
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "rLGxBQEAAAAAAAAAAAAAQLQAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/neckermannat/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 4484723,
+"logical" : 471706171457,
+"physical" : 2101175460864
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "rrGxBQEAAAAAAAAAAAAAQH0AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/pelipal/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 11088,
+"logical" : 1869965151,
+"physical" : 5982678528
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "s7GxBQEAAAAAAAAAAAAAQI0AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/worldofsweets/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 196168,
+"logical" : 64024596151,
+"physical" : 134484520448
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "trGxBQEAAAAAAAAAAAAAQIYAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/arselectronica/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "vIuFCgEAAAAAAAAAAAAAQNIAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/outdoorbroker/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 288221,
+"logical" : 15854898316,
+"physical" : 62929056768
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "lj3fCgEAAAAAAAAAAAAAQNUAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/sys11/mgmt-blu-nfs/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 118770,
+"logical" : 1603702755,
+"physical" : 8187696640
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "kbU0EAEAAAAAAAAAAAAAQJUAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/cbr/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 27519,
+"logical" : 57566328056,
+"physical" : 99818188800
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "vxAREQEAAAAAAAAAAAAAQIgAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/meleven/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 59791479,
+"logical" : 4528700288753,
+"physical" : 13244695313920
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "Vj_PHgEAAAAAAAAAAAAAQL4AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/syseleven/cubesql",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 219902325555200,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 197912092999680,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 59,
+"logical" : 423034630018,
+"physical" : 708310144000
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "hblaMwEAAAAAAAAAAAAAQN0AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/sys11/mgmt-blu-nfs/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 496759,
+"logical" : 10666026321,
+"physical" : 36898246144
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "2MIwNgEAAAAAAAAAAAAAQN4AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/stone-218/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 2,
+"logical" : 8218,
+"physical" : 46592
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "QxLVQwEAAAAAAAAAAAAAQN8AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/techem/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 62013,
+"logical" : 10084511827,
+"physical" : 24343437824
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "NtYmWAEAAAAAAAAAAAAAQOEAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/intersport/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 26,
+"logical" : 23552991,
+"physical" : 40035840
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "O8-8ZQEAAAAAAAAAAAAAQOkAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/gutscheinconnection/share4",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 15566,
+"logical" : 2186017608405,
+"physical" : 3664447631360
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "4rifaQEAAAAAAAAAAAAAQOYAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/verticalmedia/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 5447,
+"logical" : 44472282,
+"physical" : 238979072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "MxGVdAEAAAAAAAAAAAAAQOgAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/smartexposepvc/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "bA0bhQEAAAAAAAAAAAAAQOoAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/norbertspielt/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "LpvojwEAAAAAAAAAAAAAQOsAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/norbertspielt/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 1,
+"logical" : 0,
+"physical" : 3072
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "_wEFnAEAAAAAAAAAAAAAQOwAAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/zooroyal/share2",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 3407163,
+"logical" : 97485401095,
+"physical" : 462657499136
+}
+},
+
+{
+"container" : true,
+"enforced" : true,
+"id" : "FNaCyAEAAAAAAAAAAAAAQO0AAAAAAAAA",
+"include_snapshots" : false,
+"linked" : null,
+"notifications" : "default",
+"path" : "/ifs/data/projects/restvlan4/share1",
+"persona" : null,
+"ready" : true,
+"thresholds" : 
+{
+"advisory" : null,
+"advisory_exceeded" : false,
+"advisory_last_exceeded" : null,
+"hard" : 10995116277760,
+"hard_exceeded" : false,
+"hard_last_exceeded" : 0,
+"soft" : 9895604649984,
+"soft_exceeded" : false,
+"soft_grace" : 604800,
+"soft_last_exceeded" : 0
+},
+"thresholds_include_overhead" : false,
+"type" : "directory",
+"usage" : 
+{
+"inodes" : 243191,
+"logical" : 234447970098,
+"physical" : 423468848128
+}
+}
+],
+"resume" : null
+}

@@ -18,6 +18,7 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
+use PHPUnit\Framework\TestCase;
 use SysEleven\IsilonEleven\Exceptions\ApiNotAvailableException;
 use SysEleven\IsilonEleven\Exceptions\AuthFailedException;
 use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
@@ -28,7 +29,7 @@ use SysEleven\IsilonEleven\RestClient;
  *
  * @package SysEleven\IsilonEleven\Tests
  */
-class RestClientTest extends \PHPUnit_Framework_TestCase
+class RestClientTest extends TestCase
 {
     /**
      * @var RestClient $object
@@ -37,7 +38,7 @@ class RestClientTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->restClient = new RestClient(null, null, array());
+        $this->restClient = new RestClient(null, array());
     }
 
     /**

@@ -21,6 +21,8 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Request;
 
 use SysEleven\IsilonEleven\Exceptions\AuthFailedException;
+use SysEleven\IsilonEleven\Exceptions\IsilonConflictException;
+use SysEleven\IsilonEleven\Exceptions\IsilonNotFoundException;
 use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
 use SysEleven\IsilonEleven\Exceptions\ApiNotAvailableException;
 
@@ -360,6 +362,7 @@ class RestClient implements RestClientInterface
      * @param array $params
      *
      * @return \GuzzleHttp\Psr7\Stream|mixed|\Psr\Http\Message\StreamInterface
+     * @throws \SysEleven\IsilonEleven\Exceptions\IsilonNotFoundException
      *
      * @throws ApiNotAvailableException
      * @throws AuthFailedException
@@ -389,9 +392,17 @@ class RestClient implements RestClientInterface
                     self::AUTHENTICATION_ERROR,
                     $ce->getResponse());
             }
-            throw new IsilonRunTimeException($ce->getMessage(),
-                $ce->getCode(),
-                null, $ce);
+
+            if (404 === $ce->getResponse()->getStatusCode()) {
+                throw new IsilonNotFoundException('Not found', 404, $ce->getResponse(), $ce);
+            }
+
+            if (409 === $ce->getResponse()->getStatusCode()) {
+                $message = '';
+                throw new IsilonConflictException($message, 409, $ce->getResponse(), $ce);
+            }
+
+            throw new IsilonRunTimeException($ce->getMessage(), $ce->getCode(), $ce->getResponse(), $ce);
         }
         catch (\Exception $e) {
             throw new IsilonRunTimeException($e->getMessage(),
