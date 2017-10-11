@@ -18,7 +18,6 @@ use SysEleven\IsilonEleven\Exceptions\IsilonConflictException;
 use SysEleven\IsilonEleven\Exceptions\IsilonNotFoundException;
 use SysEleven\IsilonEleven\Exceptions\IsilonRunTimeException;
 use SysEleven\IsilonEleven\IsilonClient;
-use \Mockery as m;
 use SysEleven\IsilonEleven\RestClient;
 use PHPUnit\Framework\TestCase;
 
@@ -164,8 +163,6 @@ class IsilonClientTest extends TestCase {
         $path = '/ifs/data/smith/smith2';
         $quota = $client->getQuotaForPath('/ifs/data/smith/smith2');
 
-        file_put_contents(__DIR__.'/quota-by-path.json', \GuzzleHttp\json_encode($quota));
-
         static::assertArrayHasKey('quotas', $quota);
         static::assertCount(1, $quota['quotas']);
         static::assertEquals($path, $quota['quotas'][0]['path']);
@@ -223,8 +220,8 @@ class IsilonClientTest extends TestCase {
     public function getClient(MockHandler $handler = null, $getConnection = false)
     {
         if ($getConnection === true) {
-            $transport = new RestClient('https://blu-isilon-node1.syseleven.net:8080');
-            $transport->setUsername('smith');
+            $transport = new RestClient('your_url');
+            $transport->setUsername('your_user');
             $transport->setPassword('password_here');
             $client = new IsilonClient($transport, 'SMITH');
 
