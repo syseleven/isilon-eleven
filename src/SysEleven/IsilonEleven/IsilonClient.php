@@ -79,6 +79,28 @@ class IsilonClient implements IsilonInterface
     }
 
     /**
+     * Lists the filesystem contents for the given path
+     *
+     * @param null $path
+     * @param array $params
+     *
+     * @return array|string
+     */
+    public function listNamespace($path = '', array $params = [])
+    {
+        $base = '/namespace';
+        $defaults = ['limit' => 100000];
+
+        $params = array_merge_recursive($defaults, $params);
+
+        if (null !== $path) {
+            $base = $base.'/'.$path;
+        }
+
+        return $this->callApi('GET', $base, ['query' => $params]);
+    }
+
+    /**
      * Get a summary of all the existent NFS shares on Isilon NAS
      *
      * @param string $zone  Specifies zone

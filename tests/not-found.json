@@ -1,0 +1,11 @@
+
+{
+"errors" : 
+[
+
+{
+"code" : "AEC_NOT_FOUND",
+"message" : "Invalid encoded object: 'BOGUS'"
+}
+]
+}
