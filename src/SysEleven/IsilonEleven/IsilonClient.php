@@ -115,7 +115,7 @@ class IsilonClient implements IsilonInterface
             $zone = $this->defaultZone;
         }
 
-        return $this->callApi('GET', '/platform/2/protocols/nfs/exports', ['zone' => $zone]);
+        return $this->callApi('GET', '/platform/2/protocols/nfs/exports', ['query' => ['zone' => $zone]]);
     }
 
     /**
@@ -135,7 +135,7 @@ class IsilonClient implements IsilonInterface
             $zone = $this->defaultZone;
         }
 
-        return $this->callApi('GET', '/platform/2/protocols/nfs/exports/' . $id, ['zone' => $zone])['exports'][0];
+        return $this->callApi('GET', '/platform/2/protocols/nfs/exports/' . $id, ['query' => ['zone' => $zone]])['exports'][0];
     }
 
     /**
@@ -187,7 +187,7 @@ class IsilonClient implements IsilonInterface
             $zone = $this->defaultZone;
         }
 
-        return $this->callApi('DELETE', '/platform/2/protocols/nfs/exports/' . $id . '?zone=' . $zone);
+        return $this->callApi('DELETE', '/platform/2/protocols/nfs/exports/' . $id , ['query' => ['zone' => $zone]]);
     }
 
     /**
@@ -335,6 +335,7 @@ class IsilonClient implements IsilonInterface
      *
      * @param array $params
      * @return array|string
+     * @throws \RuntimeException
      * @throws \BadMethodCallException
      */
     public function listQuotas(array $params = [])
